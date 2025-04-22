@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    // variaveis
+    char direcao1[5], direcao2[10];
+    int repeticoes, i = 0;
+
+    // escolhendo a quantidade de casas
+    printf("Quantas casas? ");
+    scanf("%d", &repeticoes);
+
+    // escolhendo a primeira direção
+    printf("Digite a primeira direção: ");
+    scanf("%s", direcao1);
+
+    // escolhendo a primeira direção   
+    printf("Digite a segunda direção: ");
+    scanf("%s", direcao2);
+        
+    printf("Movimento realizado: \n");
+    
+    do {
+        if (i % 2 == 0) {
+            printf("%s \n", direcao1);
+        } else {
+            printf("%s \n", direcao2);
+        }
+        i++;
+    } while (i < repeticoes * 2);
+    
+    
+    return 0;
+}
