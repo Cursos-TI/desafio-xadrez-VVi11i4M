@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main() {
+    char direcao[10];
+    int casas, i = 0;
+
+    printf("Quantas casas deseja andar? ");
+    scanf("%d", &casas);
+
+    printf("Digite uma direcao: ");
+    scanf("%s", direcao);
+
+    while (i < casas) {
+        printf("%s\n", direcao);
+        i++;
+    }
+
+    return 0;
+}
