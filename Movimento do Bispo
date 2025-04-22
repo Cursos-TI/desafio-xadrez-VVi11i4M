@@ -1,0 +1,35 @@
+#include <stdio.h>
+
+int main() {
+    char direcao1[5], direcao2[8];
+    int repeticoes;
+    int i = 0;
+
+    // escolhendo a quantidade de casas, jogador digita a quantidade de casas a percorrer
+    printf("Quantas casas? \n");
+    scanf("%d", &repeticoes);
+   
+// O Bispo anda apenas na diagonal, então será necessário escolher 2 direções entre cim e baixo, esquerda e direita
+
+    // escolhendo a primeira direção
+    printf("Digite a primeira direção (cima ou baixo): \n");
+    scanf("%s", direcao1);
+   
+    // escolhendo a segunda direção   
+    printf("Digite a segunda direção (esquerda ou direita): \n");
+    scanf("%s", direcao2);
+    
+// Será impresso o movimento realizado pelo Bispo
+// Para corrigir o problema de movimentação (Bispo anda cima e direita contando como 2 casas), subtraimos a variavel i por 2
+// Sendo assim, o movimento será realizado de forma correta repetindo cima e direita 2 vezes conforme solicitado pelo jogador
+
+    for(i; i - 2 < repeticoes; i++) {
+        if(i % 2 == 0) {
+            printf("%s \n", direcao1);
+        } else {
+            printf("%s \n", direcao2);
+        }
+    }
+    
+    return 0;
+}
